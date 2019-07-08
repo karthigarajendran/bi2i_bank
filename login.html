@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset = "utf-8">
+        <title>Login Page</title>
+        <link rel = "stylesheet" href = "css/login.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="js/login.js"></script>
+    </head>
+    <body>
+        <div>
+            <div>
+                <div id="bank-header">BI2I Bank</div>
+            </div>
+            <div>
+                    <ul id="menu">
+                        <li id ="menu-item"><a id="menu-link" href="#">PERSONAL BANKING</a></li>
+                        <li id ="menu-item"><a id="menu-link" href="#">PRIVILEGE BANKING</a></li>
+                        <li id ="menu-item"><a id="menu-link" href="#">WEALTH MANAGEMENT</a></li>
+                        <li id ="menu-item"><a id="menu-link" href="#">PRIVATE BANKING</a></li>
+                        <li id ="menu-item"><a id="menu-link" href="#">NRI BANKING</a></li>
+                        <li id ="menu-item"><a id="menu-link" href="#">CORPORATE BANKING</a></li>
+                        <li id ="menu-item"><a id="menu-link" href="#">DEALS & MORE</a></li>
+                        <li id ="menu-item"><a id="menu-link" href="#">HELP</a></li>
+                    </ul>
+            </div>
+            <div id="login-div">
+                
+                <div id="login-form">
+                    <div id="login-header">Login to Internet Banking </div>
+                    <form id="fields">
+                        <div class="row tag-margin">
+                            <div class="col-sm-12">
+                                <p id="error" class="tag-margin"></p>
+                            </div>
+                        </div>
+                        <div class="row tag-margin">
+                            <div class="col-sm-12">
+                                <div class="col-sm-4  label-style">Username : </div>
+                                <div class="col-sm-8" style="margin-left: -11px;">
+                                    <input class="common-style-input set-width" id="username" type="text" name="username" value="" maxlength="15" autofocus/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row tag-margin">
+                            <div class="col-sm-12">
+                                <div class="col-sm-4 label-style">Password : </div>
+                                <div class="col-sm-8" style="margin-left: -11px;">
+                                    <input class="common-style-input set-width" id="pwd" type="password" name="password" maxlength="9"  />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-4"></div>
+                            <div class="col-xs-4 " style="margin:auto;">
+                                <button type="button" class="btn btn-primary btn-block btn-large" onclick="login({username : username.value,password : password.value})">Login</button>
+                            </div>
+                            <div class="col-xs-4 col-xs-4"></div>
+                        </div>
+                        <div class="row tag-margin">
+                            <div class="col-sm-12" style="text-align:center;padding-top:10px;"> <a href="#">Trouble in logging in?</a> <a href="#">Need help?</a></div>
+                        </div>
+                        <br>
+                    </form>
+                </div> 
+            </div>
+            <div>
+            <img  class ="my-offers" id= "bank-banner" src="images/offer1.jpg" alt="banner"/> 
+            <img  class ="my-offers" id= "bank-banner" src="images/offer2.png" alt="banner"/> 
+            <img  class ="my-offers" id= "bank-banner" src="images/offer3.jpg" alt="banner"/> 
+            </div>
+        </div>
+        <br>
+        <br>
+        <div style="padding-left: 5px; margin-top: 20px;">
+            <p style="color: rgb(22, 91, 156); font-weight: bolder; font-size: 15px">Important security information </p>
+            <ul style="font-size: 12px">
+                <li>Before logging in, please ensure that the URL address on the address bar of your internet browser starts with https://netbanking.zetabank.com</li>
+                <li>Never provide your User ID or password to any one on phone or in response to a mail. <a href="#">Report a suspicious mail</a></li>
+                <li>Do not enter login or other sensitive information in any pop up window</li>
+                <li>Verify the site's security certificate by clicking on the padlock icon of your internet browser. For more details <a href="#">click here</a></li>
+            </ul>
+        </div>
+        <script>
+                var myIndex = 0;
+                carousel();
+                
+                function carousel() {
+                  var i;
+                  var x = document.getElementsByClassName("my-offers");
+                  for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";  
+                  }
+                  myIndex++;
+                  if (myIndex > x.length) {myIndex = 1}    
+                  x[myIndex-1].style.display = "block";  
+                  setTimeout(carousel, 3000);
+                }
+                </script>
+             
+    </body>
+</html>
