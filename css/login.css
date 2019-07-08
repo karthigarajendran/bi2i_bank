@@ -1,0 +1,91 @@
+#bank-header{
+    font-style: italic;
+    font-weight: bolder;
+    color:rgb(22, 91, 156);
+    font-size: 25px;
+    padding: 10px;
+}
+#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: rgb(22, 91, 156);
+}
+  
+#menu-item {
+float: left;
+}
+  
+#menu-link {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+}
+
+#login-div{
+    width:30%;
+    height: 70vh;
+    float:left;
+}
+
+#bank-banner{
+    width:70%;
+    height: 70vh;
+    padding:10px;
+    float: right;
+    object-fit: cover;
+}
+
+.tag-margin {
+    margin-left: 5px;
+}
+#login-header{
+    background-color: #eeeee3;
+    height:40%;
+    font-weight:bolder;
+    font-size: 15px;
+    padding:10px;
+    border:1px grey solid;
+    border-bottom-style: none;
+}
+#login-form{
+    /* background-color: darkgrey; */
+    width: 350px;
+    margin: auto;
+    margin-top: 10%;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 22px 0px 22px 0px;
+}
+
+#fields{
+    border:1px grey solid;
+
+}
+
+.label-style {
+    padding-top: 6px;
+    font-weight: bold;
+}
+
+.common-style-input {
+    margin-bottom: 10px;
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 12px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+}
+
+.set-width {
+    width: 90%;
+}
+
+#error {
+    color: red;
+    visibility: hidden;
+}
